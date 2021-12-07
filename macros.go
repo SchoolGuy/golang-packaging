@@ -27,11 +27,9 @@
 ExclusiveArch: aarch64 %ix86 x86_64 %arm ppc64 ppc64le s390x riscv64
 
 %go_provides \
-%if 0%{?suse_version} <= 1110 \
 %global _use_internal_dependency_generator 0 \
 %global __find_provides %{_prefix}/lib/rpm/golang.prov \
 %global __find_requires %{_prefix}/lib/rpm/golang.req \
-%endif
 
 # goprep prepares the expected Go package build environement. We need a $GOPATH
 # (for reference look at go help gopath) and we need a valid importpath (for
